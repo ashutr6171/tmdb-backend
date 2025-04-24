@@ -3,6 +3,8 @@ const express = require('express');
 const axios = require('axios');
 
 const app = express();
+const cors = require('cors');
+app.use(cors()); // Allow all origins by default
 const PORT = process.env.PORT || 5000;
 const TMDB_API_KEY = process.env.TMDB_API_KEY;
 const TMDB_API_URL = 'https://api.themoviedb.org/3';
